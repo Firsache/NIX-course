@@ -3,4 +3,10 @@ div{
     height: 200px;
     background-color: black;
     background-image: url(img.jpg);
+    background-repeat: space;
+    background-size: 25%;
 }
+
+/*
+background-repeat: round;
+*/
