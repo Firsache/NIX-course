@@ -1,19 +1,29 @@
 *{
-    font-weight: 400;
+    font-weight: 800;
     line-height: 1.2;
     font-size: 14px;
 }
 body{
-    background-image: url;
+    background-image: url(/HW_3/task_1/friends-tv-show.jpg);
 }
 h1{
-
+    color: #003252;;
 }
-.par-one {}
+.par-one {
+        color: rgb(0, 105, 162);
+}
 
-.par-two {}
+.par-two {
+    color: hsl(200, 100%, 50%);
+}
 
-.par-three {}
+.par-three {
+    color:aqua;
+}
 span{
-
+    color: rgba(0, 0, 18, 1);
 }
+/*
+span {
+    color: hsla(240, 100%, 4%, 1);
+}*/
