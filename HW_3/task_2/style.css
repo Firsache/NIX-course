@@ -1,0 +1,24 @@
+p{
+    color: darkblue;
+}
+body{
+    opacity: 0.3;
+}
+
+/*
+p {
+    color: #00008b;
+}
+p {
+    color: rgb(0, 0, 139);
+}
+p {
+    color: hsl(240, 100%, 27%);
+}
+p {
+    color: hsla(240, 100%, 27%, 1);
+}
+body {
+    color: rgba(0, 0, 139, 0.3);
+}
+*/
