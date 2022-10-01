@@ -1,0 +1,31 @@
+.left {
+    width: 17%;
+    float: left;
+}
+
+.right {
+    width: 14%;
+    float: right;
+}
+
+.wrapper {
+    margin-left: 17%;
+    margin-right: 14%;
+}
+.wrapper-small{
+    
+}
+.right-two, .left-two {
+    width: 15%;
+}
+.right-two{
+    float: right;
+}
+.left-two {
+    float: left;
+}
+
+.main {
+    margin-left: 15%;
+    margin-right: 15%;
+}
