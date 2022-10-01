@@ -1,0 +1,22 @@
+.right, .left {
+    background-color: green;
+    width: 70px;
+}
+.block-one, .block-two {
+    background-color: red;
+}
+.right {
+    float: right;
+}
+
+.block-one {
+    margin-right: 70px;
+}
+
+.left {
+    float: left;
+}
+
+.block-two {
+    margin-left: 70px;
+}
