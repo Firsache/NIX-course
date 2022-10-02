@@ -1,15 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>homework four, task </title>
-    <link rel="stylesheet" type="text/css" href="">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>homework four, task nine</title>
+        <link rel="stylesheet" type="text/css" href="">
+        <style>
+            .open:hover{
+                position: relative;
+                z-index: 2;
+            }
+            .hidden{
+                position: relative;
+                z-index: 1;
+                background-color: red;
+                text-align: right;
+            }
+        </style>
+    </head>
 
-<body>
-</body>
-
+    <body>
+        <ul>
+            <li>lvl 1</li>
+            <li class="open">
+                lvl 1
+                <ul class="hidden">
+                    <li>lvl 2</li>
+                    <li>lvl 2</li>
+                </ul>
+            </li>
+            <li>lvl 1</li>
+        </ul>
+    </body>
 </html>
