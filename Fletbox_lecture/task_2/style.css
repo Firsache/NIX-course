@@ -1,0 +1,31 @@
+.container {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.one {
+    align-self: flex-end;
+}
+
+
+.two {
+    align-self: center;
+}
+
+.three {
+    align-self: flex-start;
+}
+
+.four {
+    align-self: center;
+}
+
+.five {
+    align-self: flex-end;
+}
