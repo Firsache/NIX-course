@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    border: 1px solid black;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+    width: 500px;
+}
+.item {
+    border: 1px solid black;
+    padding: 5px;
+}
+.one {
+    align-self: flex-start;
+}
+
+.two, .four {
+    justify-content: center;
+    align-items: center;
+}
+
+.three {
+    align-self: stretch;
+}
+.five {
+    align-self:flex-end;
+}

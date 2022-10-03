@@ -2,30 +2,25 @@
     border: 1px solid black;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
+    height: 150px;
+    width: 70%;
 }
 
 .item {
     border: 1px solid black;
     padding: 5px;
+    text-align: center;
 }
 
-.one {
+.one, .five {
     align-self: flex-end;
 }
 
-
-.two {
+.two, .four {
     align-self: center;
 }
 
 .three {
     align-self: flex-start;
-}
-
-.four {
-    align-self: center;
-}
-
-.five {
-    align-self: flex-end;
 }
