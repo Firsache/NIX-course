@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+}
+div{
+    padding: 5px;
+    border: 2px solid black;
+    margin: 5px;
+}
+.flex-container{
+    min-width: 400px;
+    max-width: 600px;
+    display: flex;
+}
+@media (min-width:400px) {
+    .three {
+        flex-grow: 0;
+    }
+}
+
+@media (min-width:501px){
+    .three {
+        flex-grow: 2;
+        max-width: 150px;
+    }
+}
+.one, .three{
+    flex-basis: 110px;
+}
+.two, .four{
+    flex-basis: 60px;
+}
+.one{
+    flex-grow: 0;
+}
+.two{
+    flex-grow: 2;
+    max-width: 110px;
+}
+.four {
+    flex-grow: 2;
+}
