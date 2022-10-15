@@ -177,14 +177,20 @@ if (age >= 14 && age <= 90) {
 //  task 20
 
 /*
-let age;
-if (age <= 14 && age >= 90) {
+if (!(age >= 14 && age <= 90)){
     alert("truthy!");
 } else {
     alert("falsy!");
 }
 
-let age != ( age >= 14 ) && (age <= 90)? "truthy!" : "falsy!";
+let age;
+if (age < 14 && age > 90) {
+    alert("truthy!");
+} else {
+    alert("falsy!");
+}
+
+
 
 */
 //  task
