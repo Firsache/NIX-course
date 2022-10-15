@@ -192,15 +192,17 @@ if (age < 14 && age > 90) {
     alert("falsy!");
 }
 
-
-
 */
-//  task
+
+//  task 21
 
 /*
-
+if (-1 || 0) alert( 'first'); ----- виконується, бо -1 це true
+if (-1 && 0) alert( 'second' ); ----- не виконується, бо 0 це false
+if (null || -1 && 1) alert('third' ); ----- виконується, бо  -1 && 1  true має більший пріоритете, тому або також true
 */
-//  task
+
+//  task 22
 
 /*
 
