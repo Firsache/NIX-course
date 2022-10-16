@@ -121,7 +121,7 @@ if (answer > 0) {
 } else if (answer == 0) {
     alert(0);
 } else {
-    alert(-1);
+    alert("-1");
 }
 */
 //  task 12
@@ -205,57 +205,179 @@ if (null || -1 && 1) alert('third' ); ----- виконується, бо  -1 && 
 //  task 22
 
 /*
-
+let login = prompt('Введіть логін');
+let password;
+if (login == null || login == "") {
+    alert("Скасовано");
+} else if (login == 'Адмін') {
+    password = prompt('Введіть пароль');
+    if (password == 'я головний') {
+        alert("Здрастуйте!");
+    } else if (password == null || password == "") {
+        alert("Скасовано");
+    } else {
+        alert("Невірний пароль");
+    }
+} else {
+    alert("Я вас не знаю");
+}
 */
-//  task
+//  task 23
 
 /*
-
+let browser;
+if (browser == 'Edge') {
+    alert(" You've got the Edge! ");
+} else if (browser == 'Chrome' ||
+    browser == 'Safari' ||
+    browser == 'Firefox' ||
+    browser == 'Opera') {
+    alert( ' Okay we support these browsers too' );
+} else {
+    alert( ' We hope that this page looks ok!' );
+}
 */
-//  task
+//  task 24
 
 /*
-
+let a = +prompt('a?', '');
+switch (a) {
+    case "0":
+        alert(0);
+        break;
+    case "1":
+        alert(1);
+        break;
+    case "2":
+    case "3":
+        alert('2,3');
+        break;
+}
 */
-//  task
+//  task 25
+
 
 /*
+let number = prompt("Введіть число", "");
 
+if (number > 0) {
+    number++;
+    alert(number);
+} else {
+    alert(number);
+}
 */
-//  task
+//  task 26
 
 /*
-
+let number = prompt("Введіть число", "");
+if (number > 0) {
+    number++;
+    alert(number);
+} else {
+    number = number - 2;
+    alert(number);
+}
 */
-//  task
+//  task 27
 
 /*
-
+let number = prompt("Введіть число", "");
+if (number > 0) {
+    number++;
+    alert(number);
+} else if (number < 0) {
+    number = number - 2;
+    alert(number);
+} else {
+    number = 10;
+    alert(number);
+}
 */
-//  task
+//  task 28
 
 /*
-
+let numOne;
+let numTwo;
+let numTree;
+let amount;
+if (numOne > 0) {
+    amount = amount + 1;
+}
+if (numTwo > 0) {
+    amount = amount + 1;
+}
+if (numTree > 0) {
+    amount = amount + 1;
+    alert(amount);
+}
 */
-//  task
+//  task 29
 
 /*
-
+let numOne;
+let numTwo;
+let numTree;
+let amountPositive = 0;
+let amountNegative = 0;
+if (numOne > 0) {
+    amountPositive = amountPositive + 1;
+} else if (numOne < 0){
+    amountNegative = amountNegative + 1;
+}
+if (numTwo > 0) {
+    amountPositive = amountPositive + 1;
+} else if (numTwo < 0){
+    amountNegative = amountNegative + 1;
+}
+if (numTree > 0) {
+    amountPositive = amountPositive + 1;
+} else if (numTree < 0){
+    amountNegative = amountNegative + 1;
+}
+alert(amountPositive);
+alert(amountNegative);
 */
-//  task
+//  task 30
 
 /*
-
+let numOne;
+let numTwo;
+if (numOne < numTwo) {
+    alert(numTwo);
+} else if (numOne == numTwo){
+    alert("Числа рівні");
+} else {
+    alert(numOne);
+}
 */
-//  task
+//  task 31
 
 /*
-
+let numOne;
+let numTwo;
+if (numOne < numTwo) {
+    alert(numOne);
+} else if (numOne == numTwo){
+    alert("Числа рівні");
+} else {
+    alert(numTwo);
+}
 */
-//  task
+//  task 32
 
 /*
-
+let numOne;
+let numTwo;
+if (numOne < numTwo) {
+    alert(numTwo);
+    alert(numOne);
+} else if (numOne == numTwo){
+    alert("Числа рівні");
+} else {
+    alert(numOne);
+    alert(numTwo);
+}
 */
 //  task
 
