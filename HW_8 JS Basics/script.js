@@ -56,10 +56,10 @@ let a = 1, b = 1;
 let c = ++a;
 let d = b++;
 
-alert(a); ----поверне 2
-alert(b); ----поверне 2
-alert(c); ----поверне 2
-alert(d); ----поверне 1
+alert(a); ----поверне 2 збільшили на один
+alert(b); ----поверне 2 збільшили на один
+alert(c); ----поверне 2 превіксна форма вертає нове значенно
+alert(d); ----поверне 1 постфіксна форма вертає старе значення
 
 */
 
@@ -69,7 +69,7 @@ alert(d); ----поверне 1
 let a = 2;
 let x = 1 + (a *= 2);
 
-a ----поверне 4
+a ----поверне 4 -- пріоритетр 1 - дужки
 x ----поверне 5
 */
 
@@ -144,27 +144,27 @@ let message = (login == ' Співробітник' ? ' Привіт ' :
 //  task 14
 
 /*
-alert( null || 2 || undefined ); --------- 2
+alert( null || 2 || undefined ); --------- 2 ---- при || перерівка зупиниться на першому true
 */
 //  task 15
 
 /*
-alert(alert (1) || 2 || alert(3)); --------- alert (1) потім alert (2)
+alert(alert (1) || 2 || alert(3)); --------- 1 потім 2 ---- при || перерівка зупиниться на першому true
 */
 //  task 16
 
 /*
-alert(1 && null && 2); ----------- null
+alert(1 && null && 2); ----------- null ---- при && перерівка зупиниться на першому false
 */
 //  task 17
 
 /*
-alert(alert(1) && alert(2)); --------- alert (1) потім undedined
+alert(alert(1) && alert(2)); --------- alert (1) потім undefined. бо при перевірці зліва від &&, alert видаст undefined. тому далі перевірка не піде
 */
 //  task 18
 
 /*
-alert(null || 2 && 3 || 4 ); --------- 3
+alert(null || 2 && 3 || 4 ); --------- 3  - пріоритет 1 - &&, там перерівка зупиниться на останньому true. пріоритет 2 - ||, там перерівка зупиниться на першому true
 */
 //  task 19
 
@@ -199,7 +199,7 @@ if (age < 14 && age > 90) {
 /*
 if (-1 || 0) alert( 'first'); ----- виконується, бо -1 це true
 if (-1 && 0) alert( 'second' ); ----- не виконується, бо 0 це false
-if (null || -1 && 1) alert('third' ); ----- виконується, бо  -1 && 1  true має більший пріоритете, тому або також true
+if (null || -1 && 1) alert('third' ); ----- виконується, бо  -1 && 1  true має більший пріоритете, тому або - також true
 */
 
 //  task 22
@@ -255,7 +255,6 @@ switch (a) {
 }
 */
 //  task 25
-
 
 /*
 let number = prompt("Введіть число", "");
@@ -343,26 +342,28 @@ alert(amountNegative);
 /*
 let numOne;
 let numTwo;
+let max = numOne
 if (numOne < numTwo) {
-    alert(numTwo);
+    max = numTwo;
 } else if (numOne == numTwo){
     alert("Числа рівні");
-} else {
-    alert(numOne);
 }
+alert(max);
+
 */
 //  task 31
 
 /*
 let numOne;
 let numTwo;
+let min = numTwo;
 if (numOne < numTwo) {
-    alert(numOne);
+    min = numOne;
 } else if (numOne == numTwo){
     alert("Числа рівні");
-} else {
-    alert(numTwo);
 }
+alert(min);
+
 */
 //  task 32
 
@@ -433,8 +434,8 @@ if (a == b) {
     a = 0;
     b = 0;
 } else {
-    a ++;
-    b ++;
+    a = a + 1;
+    b = b + 1;
 }
 alert(a);
 alert(b);
@@ -442,69 +443,104 @@ alert(b);
 //  task 36
 
 /*
-variant 1
-let a;
-let b;
-let c;
-let min;
-if (b > c && c > a) {
-    min = a;
-}
-if (c > b  && b > a) {
-    min = a;
-}
-if (a > c && c > b) {
-    min = b;
-}
-if (c > a && a > b) {
-    min = b;
-}
-if (a > b && b > c) {
-    min = c;
-}
-if (b > a && a > c) {
-    min = c;
-}
-
-alert(min);
-
-variant 2
 let a;
 let b;
 let c;
 let min = a;
-if (a > b && b < c) {
+if ( b < a && b < c) {
     min = b;
 }
-if (a > c && c < b) {
+if ( c < a && c < b) {
     min = c;
 }
 
 alert(min);
 */
-//  task
+//  task 37
 
 /*
-
+let a;
+let b;
+let c;
+let middle = a;
+if (c > b && c < a) {
+    middle = c;
+}
+if (c > a && c < b) {
+    middle = c;
+}
+if (b > c && b < a) {
+    middle = b;
+}
+if (b > a && b < c) {
+    middle = b;
+}
+alert(middle);
 */
-//  task
+//  task 38
 
 /*
+let a;
+let b;
+let c;
+let min = a;
+let max = c;
+if (a > b && a > c && b < c) {
+    min = b;
+    max = a;
+}
+if (a > c && a > b && c < b) {
+    min = c;
+    max = a;
+}
+if (b > c && b > a && c < a) {
+    min = c;
+    max = b;
+}
+if (b > c && b > a && a < c) {
+    min = a;
+    max = b;
+}
+if (c > b && c > a && b < a) {
+    min = b;
+    max = c;
+}
 
+alert(min);
+alert(max);
 */
-//  task
+//  task 39
 
 /*
+let a;
+let b;
+let c;
+let sum = c + b;
+if ( b < a && b < c) {
+    sum = a + c;
+}
+if ( c < a && c < b) {
+    sum = a + b;
+}
+
+alert(sum);
 
 */
-//  task
+//  task 40
 
 /*
+let a;
+let b;
+let c;
+let different = a;
+if ( a == c) {
+    different = b;
+}
+if (a == b) {
+    different = c;
+}
 
+alert(different);
 */
-//  task
 
-/*
-
-*/
 
