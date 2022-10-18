@@ -341,10 +341,18 @@ let difference = max - min;
 alert(difference);
 */
 // task 20
-/*
 
+/*
+let a = prompt('Введіть число', 0);
+if ((Number(a) % 2 == 0) && (Number(a) !== 0)) {
+    alert('це парне число')
+} else if (Number(a) == 0) {
+    alert('це нульове число')
+} else {
+    alert('це непарне число')
+}
 */
-// task
+// task 21
 /*
 
 */
