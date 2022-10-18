@@ -287,14 +287,60 @@ alert(average);
 */
 
 // task 18
-/*
 
-*/
-// task
 /*
-
+let a = prompt('Введіть число', 0);
+let square = Number(a)**2;
+alert(square);
 */
-// task
+// task 19
+
+/*
+variant 1
+let a = +prompt('Введіть перше число', 0);
+let b = +prompt('Введіть друге число', 0);
+let c = +prompt('Введіть трете число', 0);
+let max = a;
+let min = b;
+
+if ((c < b) && (c < a)) {
+    min = c;
+}
+if ((a < b) && (a < c)) {
+    min = a;
+}
+if ((b > a) && (b > c)) {
+    max = b;
+}
+if ((c > b) && (c > a)){
+    max = c;
+}
+let difference = max - min;
+alert(difference);
+
+variant 2
+let a = prompt('Введіть перше число', 0);
+let b = prompt('Введіть друге число', 0);
+let c = prompt('Введіть трете число', 0);
+let max = Number(a);
+let min = Number(b);
+
+if ((Number(c) < Number(b)) && (Number(c) < Number(a))) {
+    min = Number(c);
+}
+if ((Number(a) < Number(b)) && (Number(a) < Number(c))) {
+    min = Number(a);
+}
+if ((Number(b) > Number(a)) && (Number(b) > Number(c))) {
+    max = Number(b);
+}
+if ((Number(c) > Number(b)) && (Number(c) > Number(a))){
+    max = Number(c);
+}
+let difference = max - min;
+alert(difference);
+*/
+// task 20
 /*
 
 */
