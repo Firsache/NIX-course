@@ -364,10 +364,22 @@ if ((Number(a) % 2 == 0) && (Number(a) !== 0)) {
 // task 21
 
 /*
+variant 1
+let num;
+let test = String(num);
+let amount = test.length;
+let sum = Number(test[0]);
+if (amount == 2) {
+    sum = Number(test[0]) + Number(test[1]);
+}
+alert(amount);
+alert(sum);
+
+variant 2
 function digitSum(num) {
 
     let sum = 0, x = String(num);     
-    let amount = x.length - 0;
+    let amount = x.length;
     alert(amount);
     for (let i = 0; i < x.length; i++) {
 
@@ -380,8 +392,15 @@ function digitSum(num) {
 
 */
 // task 22
-/*
 
+/*
+let a = +prompt('Введіть число в дюймах', 0);
+let b = a * 2.54;
+alert(`${a} дюймів дорівнює ${b} сантиметрів`);
+
+let c = +prompt('Введіть число в сантиметрах', 0);
+let d = c / 2.54;
+alert(`${c} сантиметрів дорівнює ${d} дюймів`);
 */
 // task 23
 /*
@@ -390,40 +409,45 @@ function digitSum(num) {
 // task 24
 
 /*
-let num = +prompt('Введіть тризначне число', 0);
-if (num % 2 == 0) {
-    function digitSum(num) {
-    let sum = 0, x = String(num);
-    for (let i = 0; i < x.length; i++) {
-        sum += Number(x[i]);
-    }
-    alert(sum);
-    return(sum);
-    }
-} else if (num % 2 == 0) {
-    function digitMultiply(num) {
-    let multiply = 0, x = String(num);
-    for (let i = 0; i < x.length; i++) {
-        multiply *= Number(x[i]);
-    }
-    alert(multiply);
-    return(multiply);
-    }
+let a = prompt('Введіть тризначне число', 0);
+let sum;
+let multiply;
+let b = Number(a);
+if (b % 2 == 0) {    
+    sum = Number(a[0]) + Number(a[1]) + Number(a[2]);
+    alert(Number(sum));
+} else {    
+    multiply = Number(a[0]) * Number(a[1]) * Number(a[2]);
+    alert(Number(multiply));
 }
 */
-// task
+
+// task 25
 /*
 
 */
-// task
+
+// task 26
 /*
 
 */
-// task
+
+// task 27
 /*
 
 */
-// task
+
+// task 28
+/*
+
+*/
+
+// task 29
+/*
+
+*/
+
+// task 30
 /*
 
 */
