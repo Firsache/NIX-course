@@ -300,6 +300,15 @@ variant 1
 let a = +prompt('Введіть перше число', 0);
 let b = +prompt('Введіть друге число', 0);
 let c = +prompt('Введіть трете число', 0);
+let max = Math.max(a, b, c);
+let min = Math.min(a, b, c);
+let difference = max - min;
+alert(difference);
+
+variant 2
+let a = +prompt('Введіть перше число', 0);
+let b = +prompt('Введіть друге число', 0);
+let c = +prompt('Введіть трете число', 0);
 let max = a;
 let min = b;
 
@@ -318,7 +327,7 @@ if ((c > b) && (c > a)){
 let difference = max - min;
 alert(difference);
 
-variant 2
+variant 3
 let a = prompt('Введіть перше число', 0);
 let b = prompt('Введіть друге число', 0);
 let c = prompt('Введіть трете число', 0);
@@ -353,20 +362,54 @@ if ((Number(a) % 2 == 0) && (Number(a) !== 0)) {
 }
 */
 // task 21
+
+/*
+function digitSum(num) {
+
+    let sum = 0, x = String(num);     
+    let amount = x.length - 0;
+    alert(amount);
+    for (let i = 0; i < x.length; i++) {
+
+        sum += Number(x[i]);
+
+    }
+    alert(sum);
+    return(sum);
+}
+
+*/
+// task 22
 /*
 
 */
-// task
+// task 23
 /*
 
 */
-// task
-/*
+// task 24
 
-*/
-// task
 /*
-
+let num = +prompt('Введіть тризначне число', 0);
+if (num % 2 == 0) {
+    function digitSum(num) {
+    let sum = 0, x = String(num);
+    for (let i = 0; i < x.length; i++) {
+        sum += Number(x[i]);
+    }
+    alert(sum);
+    return(sum);
+    }
+} else if (num % 2 == 0) {
+    function digitMultiply(num) {
+    let multiply = 0, x = String(num);
+    for (let i = 0; i < x.length; i++) {
+        multiply *= Number(x[i]);
+    }
+    alert(multiply);
+    return(multiply);
+    }
+}
 */
 // task
 /*
