@@ -256,15 +256,37 @@ do {
     num = prompt('Введіть число більше 100', "");
 } while (num <= 100 && num != null);
 */
-// task
-/*
+// task 16
 
-*/
-// task
 /*
-
+let n;
+Integer:
+for (i = 2; i <= n; i++) {
+    for (let num = 2; num < i; num++) {
+        if (i % num == 0) continue Integer;
+    }
+    alert(i);
+}
 */
-// task
+// task 17
+
+/*
+variant 1
+let a = +prompt('Введіть число', 0);
+let b = +prompt('Введіть число', 0);
+let sum = a + b;
+let average = sum / 2;
+alert(average);
+
+variant 2
+let a = prompt('Введіть число', 0);
+let b = prompt('Введіть число', 0);
+let sum = Number(a) + Number(b);
+let average = sum / 2;
+alert(average);
+*/
+
+// task 18
 /*
 
 */
