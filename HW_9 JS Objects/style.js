@@ -423,31 +423,74 @@ if (b % 2 == 0) {
 */
 
 // task 25
-/*
 
+/*
+let a = +prompt('Введіть число для першої сторони трикутника', "");
+let b = +prompt('Введіть число для другої сторони трикутника', "");
+let c = +prompt('Введіть число для третьої сторони трикутника', "");
+if ((a + b) < c || (c + b) < a || (a + c) < b) {
+    alert('трикутрик не може існувати при таких довжинах');
+} else {
+    alert('Вітаю, ви створили справжній трикутник');
+}
 */
 
 // task 26
-/*
 
+/*
+let x = 4;
+let y = 9;
+let r = 10;
+let a = Math.sqrt(x**2 + y**2);
+if (a <= r ) {
+    alert("Точка знаходиться в площині кола");
+} else {
+    alert("Точка не знаходиться в площині кола");
+}
 */
 
 // task 27
-/*
 
+/*
+let user = {};
+user.name = "John";
+user.surname = "Smith";
+user.name = "Pete";
+delete user.name;
 */
 
 // task 28
-/*
 
+/*
+const user = {
+name: "John"
+};
+user.name = "Pete"; ----- об'єкт оголошенний через const змінити можна, але переневизначити user, оголошений через const не можна
 */
 
 // task 29
-/*
 
+/*
+let salaries = {
+John: 100,
+Ann: 160,
+Pete: 130
+}
+let sum = 0;
+for (let key in salaries) {
+    sum += salaries[key];
+}
+alert(sum);
 */
 
 // task 30
-/*
 
+/*
+function multiplyNumeric(obj) {
+    for (let key in obj) {
+        if (typeof obj[key] == 'number') {
+            obj[key] *= 2;
+        }
+    };           
+}
 */
