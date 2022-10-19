@@ -475,3 +475,75 @@ function multiplyNumeric(obj) {
     };           
 }
 */
+
+// task 23
+/*
+let start = confirm('Press to start a game"How to become a millionaire"!');
+let questionOne, questionTwo, questionThree, questionFour, questionFive;
+let getOneThousand, getThreeThousand, getFiveThousand, getOneMillion;
+if (start == 0) {
+    alert('Maybe you will play next time!');
+}
+else {
+    questionOne = prompt('Question 1: The closest planet to the Earth is..', "");    
+    if (questionOne === null || questionOne.toLowerCase() != 'mercury') {
+        alert('Ooops, You Lose..');
+    }
+    else {
+        alert('Well Done! You got $500!');
+        getOneThousand = confirm('Press OK to see next question and get $1,000! To save $500 press Cancel');
+        if (getOneThousand == 0) {
+            alert('Congratulations! You won $500!');
+        }
+        else {
+            questionTwo = prompt('Question 2: It is physically impossible for which animal to look up into the sky?');
+            if (questionTwo === null || questionTwo.toLowerCase() != 'pig' || questionTwo.toLowerCase() != 'pigs') {
+                alert('Ooops, You Lost $500..');
+            }
+            else {
+                alert('Well Done! You got $1,000!');
+                getThreeThousand = confirm('Press OK to see next question and get $3,000! To save $1,000 press Cancel');
+                if (getThreeThousand == 0) {
+                    alert('Congratulations! You won $1,000!');
+                }
+                else {
+                    questionThree = prompt('Question 3: Which animal has not only striped fur, but also striped skin?');
+                    if (questionThree === null || questionThree.toLowerCase() != 'tiger' || questionThree.toLowerCase() != 'tigers') {
+                        alert('Ooops, You Lost $1,000..');
+                    }
+                    else {
+                        alert('Well Done! You got $3,000!');
+                        getFiveThousand = confirm('Press OK to see next question and get $5,000!To save $3,000 press Cancel');
+                        if (getFiveThousand == 0) {
+                            alert('Congratulations! You won $3,000!');
+                        } else {
+                            questionFour = prompt('Question 4: What is Sodium Chloride?');
+                            if (questionFour === null || questionFour.toLowerCase() != 'salt') {
+                                alert('Ooops, You Lost $3,000..');
+                            }
+                            else {
+                                alert('Well Done! You got $5,000!');
+                                getOneMillion = confirm('Press OK to see next question and get $1,000,000! To save $5,000 press Cancel');
+                                if (getOneMillion == 0) {
+                                    alert('Congratulations! You won $5,000!');
+                                }
+                                else {
+                                    questionFive = prompt('Question 5: Because of what protein blood looks red?');
+                                    if (questionFive === null || questionFive.toLowerCase() != 'hemoglobin') {
+                                        alert('Ooops, You Lost $5,000..');
+                                    }
+                                    else {
+                                        alert('Well Done! You got $1,000,000!');
+                                        alert('Congratulations! You won $1,000,000 in a game "How to become a millionaire"!!!');
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+*/
