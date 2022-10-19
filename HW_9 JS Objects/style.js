@@ -10,9 +10,8 @@ while (i) {
 // task 2
 
 /*
-let a;
-let b;
-let c;
+let a, b, c;
+
 if (a < b && b < c) {
     a = a ** 2;
     b = b ** 2;
@@ -29,9 +28,8 @@ alert(c);
 // task 3
 
 /*
-let a;
-let b;
-let c;
+let a, b, c;
+
 if (a < b && b < c) {
     a = a ** 2;
     b = b ** 2;
@@ -53,13 +51,9 @@ alert(c);
 // task 4
 
 /*
-let a;
-let b;
-let c;
-let length1;
-let length2;
-let close_length;
-let close_point;
+let a, b, c;
+let length1, length2;
+let close_length, close_point;
 if (a > c && a < b) {
     length1 = a - c; 
     length2 = b - a;
@@ -85,8 +79,7 @@ alert(close_point);
 // task 5
 
 /*
-let x;
-let y;
+let x, y;
 if (x == 0 && y == 0) {
     alert(0);
 }
@@ -104,8 +97,7 @@ if (x !== 0 && y !== 0){
 // task 6
 
 /*
-let x;
-let y;
+let x, y;
 let quarter = 1;
 if (x < 0 && y > 0) {
     quarter = 2;
@@ -122,14 +114,7 @@ alert(quarter);
 // task 7
 
 /*
-let x1;
-let y1;
-let x2;
-let y2;
-let x3;
-let y3;
-let x4;
-let y4;
+let x1, y1, x2, y2, x3, y3, x4, y4;
 
 if (x1 == x2) {
     x4 == x3;
@@ -377,28 +362,24 @@ alert(sum);
 
 variant 2
 function digitSum(num) {
-
     let sum = 0, x = String(num);     
     let amount = x.length;
     alert(amount);
     for (let i = 0; i < x.length; i++) {
-
         sum += Number(x[i]);
-
     }
     alert(sum);
     return(sum);
 }
-
 */
 // task 22
 
 /*
-let a = +prompt('Введіть число в дюймах', 0);
+let a = +prompt('Введіть число в дюймах, яке потрібно перевести у сантиметри', "");
 let b = a * 2.54;
 alert(`${a} дюймів дорівнює ${b} сантиметрів`);
 
-let c = +prompt('Введіть число в сантиметрах', 0);
+let c = +prompt('Введіть число в сантиметрах, , яке потрібно перевести у дюйми', "");
 let d = c / 2.54;
 alert(`${c} сантиметрів дорівнює ${d} дюймів`);
 */
@@ -409,7 +390,7 @@ alert(`${c} сантиметрів дорівнює ${d} дюймів`);
 // task 24
 
 /*
-let a = prompt('Введіть тризначне число', 0);
+let a = prompt('Введіть тризначне число', "");
 let sum;
 let multiply;
 let b = Number(a);
@@ -465,7 +446,7 @@ delete user.name;
 const user = {
 name: "John"
 };
-user.name = "Pete"; ----- об'єкт оголошенний через const змінити можна, але переневизначити user, оголошений через const не можна
+user.name = "Pete"; ----- властивості об'єкта, оголошеного через const змінити можна, але переневизначити user, оголошений через const не можна
 */
 
 // task 29
