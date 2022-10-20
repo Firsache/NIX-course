@@ -373,15 +373,24 @@ function digitSum(num) {
 }
 */
 // task 22
-
 /*
-let a = +prompt('Введіть число в дюймах, яке потрібно перевести у сантиметри', "");
-let b = a * 2.54;
-alert(`${a} дюймів дорівнює ${b} сантиметрів`);
-
-let c = +prompt('Введіть число в сантиметрах, , яке потрібно перевести у дюйми', "");
-let d = c / 2.54;
-alert(`${c} сантиметрів дорівнює ${d} дюймів`);
+let convertInches = confirm('Вам потрібно перевести дюйми у сантиметри?');
+let concertSentimeters;
+let a, b, c, d;
+if (convertInches == true) {
+    a = +prompt('Введіть число в дюймах, яке потрібно перевести у сантиметри', "");
+    b = a * 2.54;
+    alert(`${a} дюймів дорівнює ${b} сантиметрів`);
+} else if (convertInches == false) {
+    concertSentimeters = confirm('Вам потрібно перевести сантиметри у дюйми?');
+    if (concertSentimeters == true) {
+        c = +prompt('Введіть число в сантиметрах, яке потрібно перевести у дюйми', "");
+        d = c / 2.54;
+        alert(`${c} сантиметрів дорівнює ${d} дюймів`);
+    } else {
+        alert('На жаль ця программа працює тільки з сантиметрами та дюймами');
+    }
+}
 */
 // task 23
 /*
@@ -485,8 +494,8 @@ if (start == 0) {
     alert('Maybe you will play next time!');
 }
 else {
-    questionOne = prompt('Question 1: The closest planet to the Earth is..', "");    
-    if (questionOne === null || questionOne.toLowerCase() != 'mercury') {
+    questionOne = prompt('Question 1: The closest planet to the Earth is... a) Mars b) Jupiter c) Mercury d) Neptune', "");    
+    if (questionOne === null || questionOne.toLowerCase() != 'c') {
         alert('Ooops, You Lose..');
     }
     else {
@@ -496,8 +505,8 @@ else {
             alert('Congratulations! You won $500!');
         }
         else {
-            questionTwo = prompt('Question 2: It is physically impossible for which animal to look up into the sky?');
-            if (questionTwo === null || questionTwo.toLowerCase() != 'pig' || questionTwo.toLowerCase() != 'pigs') {
+            questionTwo = prompt('Question 2: It is physically impossible for which animal to look up into the sky? a) Dogs b) Pigs c) Tigers d) Elephants', "");
+            if (questionTwo === null || questionTwo.toLowerCase() != 'b') {
                 alert('Ooops, You Lost $500..');
             }
             else {
@@ -507,8 +516,8 @@ else {
                     alert('Congratulations! You won $1,000!');
                 }
                 else {
-                    questionThree = prompt('Question 3: Which animal has not only striped fur, but also striped skin?');
-                    if (questionThree === null || questionThree.toLowerCase() != 'tiger' || questionThree.toLowerCase() != 'tigers') {
+                    questionThree = prompt('Question 3: Which animal has not only striped fur, but also striped skin? a) Tigers b) Zebras c) Cats d) Hyena', "");
+                    if (questionThree === null || questionThree.toLowerCase() != 'a') {
                         alert('Ooops, You Lost $1,000..');
                     }
                     else {
@@ -517,8 +526,8 @@ else {
                         if (getFiveThousand == 0) {
                             alert('Congratulations! You won $3,000!');
                         } else {
-                            questionFour = prompt('Question 4: What is Sodium Chloride?');
-                            if (questionFour === null || questionFour.toLowerCase() != 'salt') {
+                            questionFour = prompt('Question 4: What is Sodium Chloride? a) Oxygen b) Salt c) Chlorine d) Sodium bicarbonate', "");
+                            if (questionFour === null || questionFour.toLowerCase() != 'b') {
                                 alert('Ooops, You Lost $3,000..');
                             }
                             else {
@@ -528,8 +537,8 @@ else {
                                     alert('Congratulations! You won $5,000!');
                                 }
                                 else {
-                                    questionFive = prompt('Question 5: Because of what protein blood looks red?');
-                                    if (questionFive === null || questionFive.toLowerCase() != 'hemoglobin') {
+                                    questionFive = prompt('Question 5: Because of what protein blood looks red? a) Albumin b) Globulin c) Enzymes d) Hemoglobin', "");
+                                    if (questionFive === null || questionFive.toLowerCase() != 'd') {
                                         alert('Ooops, You Lost $5,000..');
                                     }
                                     else {
@@ -545,5 +554,4 @@ else {
         }
     }
 }
-
 */
