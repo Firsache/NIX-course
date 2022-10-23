@@ -118,11 +118,65 @@ alert(extractCurrencyValue('$120'));
 // task 10
 
 /*
+function sumInput() {
+    let array = [];
+    while (true) {
+        let num = prompt("Введіть числове значення", "");
+        if (num === null || num === "" || !isFinite(num)) break;
+        array.push(+num);
+    }
+    let sum = 0;
+    for (let key of array) {
+        sum += key;   
+    }   
+    
+    return sum;
+}
+alert(sumInput());
+
+----------------------я пробовала так сначала, но не выходило-------------------
+function sumInput() {
+    let array = [];    
+    let num;
+    do {
+        num = prompt("Введіть числове значення", "");
+        if (num === null || num === "") break;        
+    } while (!isFinite(num));
+    
+    array.push(+num);
+    
+    let sum = 0;
+    for (let key of array) {
+        sum += key;   
+    }
+    return sum;
+}
+alert(sumInput());
 */
 
 // task 11
 
 /*
+function checkAge (age) {
+if (age > 18) {
+return true;
+} else {
+// ...
+return confirm( ' Батьки дозволили ?');
+}
+}
+
+
+function checkAge (age) {
+if (age > 18) {
+return true;
+}
+// ...
+return confirm( ' Батьки дозволили ?');
+}
+------------------ обидва варінти працюют однаково, ніяких відмінностей немає.
+else зайвий, цого можна прибрати для оптимізації кода. якщо не виконається умова, 
+то ми не побачимо перший return. функція автоматично буде читати далі код, то поверне другий return
 */
 
 // task 12
