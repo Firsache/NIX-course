@@ -247,9 +247,37 @@ ask(
 // task 16
 
 /*
+function period(income, waste, price) {
+    let rest = income - waste;
+    let period = Math.round(price / rest);
+    return `Щоб купити пальму за ${price} попугаїв Вам знадобиться ${period} місяців`;
+}
+alert(period(3333, 1750, 8000));
 */
 
 // task 17
 
 /*
+function negativeNum(n){
+    let arrPositive = [];
+    let arrNegative = [];
+    let sumNegative = 0;
+    while ((arrPositive.length + arrNegative.length) < n) {
+        let num = prompt("Введіть позитивне або негативне числове значення", "");
+        if(num === null || num === '' || !isFinite(num)) continue;
+        
+        if(Number(num) < 0) {
+        arrNegative.push(num);
+        } else{arrPositive.push(num);}
+    }
+    alert(arrPositive);
+    alert(arrNegative);
+    for (let elem of arrNegative){
+        sumNegative += Number(elem);
+    }
+    return sumNegative;
+}
+
+alert(negativeNum(10));
+
 */
