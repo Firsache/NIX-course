@@ -29,11 +29,13 @@ document.querySelector('.buttons').onclick = (event) => {
             out.textContent = a;
         }
         else if (a!== '' && b !== '' && finish) {
-
+            b = key;
+            finish = false;
+            out.textContent = b;
         }
         else {
             b += key;
-            out.textContent = a; // ?????
+            out.textContent = b;
         }
         console.log(a, b, sign);
         return;
@@ -47,11 +49,41 @@ document.querySelector('.buttons').onclick = (event) => {
     }
 
     // we check whether btn = is pressed
-    
+    if (key === '=') {
+        if (b === '') b = a;
+        switch (sign) {
+            case '+':
+                a = (+a) + (+b);
+                break;
+            case '-':
+                a = a - b;
+                break;
+            case 'X':
+                a = a * b;
+                break;
+            case '/':
+                if (b === '0') {
+                    out.textContent = 'Error';
+                    a = '';
+                    b = '';
+                    sign = '';
+                    return;
+                }
+                a = a / b;
+                break;
+        }
+        finish = true;
+        out.textContent = a;
+        console.log(a, b, sign);
+    }
 }
 
 
 
 /*
+нельзя вводить 0000 0,,,,,
+0,0,0
+4,1-0,2
+если нажать , = віведет сразу 0,
 
 */
