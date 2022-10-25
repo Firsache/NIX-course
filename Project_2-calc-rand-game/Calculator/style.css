@@ -15,6 +15,30 @@
     margin: 50px auto;
     box-shadow: 4px 4px 4px #4f4f4f;
 }
+.calc-screen {
+    height: 125px;
+    padding: 10px;
+    display: grid;
+    justify-items: end;
+    align-items: flex-end;
+    margin-bottom: 25px;
+}
+.calc-screen p {
+    font-size: 4rem;
+    margin: 0;
+}
+
+.buttons {
+    display: grid;
+    grid-template-areas:
+    "ac plus-minus percent division"
+    "seven eight nine multiply"
+    "four five six minus"
+    "one two three plus"
+    "zero zero dot equal";
+    grid-gap: 7px;
+    justify-items: center;
+}
 .btn {
     width: 60px;
     height: 60px;
@@ -38,15 +62,26 @@
 .btn.bg-orange {
     background: #ff9501;
 }
-.calc-screen {}
-
-.buttons {
-    display: grid;
-    grid-template-areas: 
-    "ac plus-minus percent division"
-    "seven eight nine myltiply"
-    "four five six minus"
-    "one two three plus"
-    "zero dot equal";
-    grid-gap: 7px;
+.btn.zero {
+    grid-area: zero;
+    width: 100%;
+    border-radius: 34px;
 }
+.link-main {
+    background: #000;
+    border-radius: 34px;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 15px;
+    text-decoration: none;
+    box-shadow: 4px 4px 4px #4f4f4f;
+}
+.link-main:hover {
+    color: #ff9501;
+}
+.link-main:active {
+    color: #ff9501;
+        box-shadow: 4px 4px 4px #353535;
+}
+
+
