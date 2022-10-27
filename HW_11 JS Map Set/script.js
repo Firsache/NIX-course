@@ -192,7 +192,39 @@ alert( factorial(5) ); // 120
 
 // task 6
 
-num = prompt('Введіть число', "");
 /*
-Calculator
+function Calculator() {
+    let a;
+    do {
+        a = parseFloat(prompt('Введіть перше число', ""));
+    } while (a === '' || a === 'null' || isNaN(a));
+
+    let b;
+    do {
+        b = parseFloat(prompt('Введіть друге число', ""));
+    } while (b === '' || b === 'null' || isNaN(b));
+
+    let operator;
+    do {
+        operator = prompt('Введіть оператор + , - , / або * ', "");
+    } while (operator === '' || operator === 'null');
+    
+    if (operator === '/' && b === 0) {
+        return alert('Error');
+    }
+    switch (operator) {
+        case '+':
+            return (a + b).toFixed(3);
+            break;
+        case '-':
+            return (a - b).toFixed(3);
+            break;
+        case '*':
+            return (a * b).toFixed(3);
+            break;
+        case '/':
+            return (a / b).toFixed(3);
+    }    
+}
+alert(Calculator());
 */
