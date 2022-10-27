@@ -192,6 +192,7 @@ alert( factorial(5) ); // 120
 
 // task 6
 
+num = prompt('Введіть число', "");
 /*
 Calculator
 */
