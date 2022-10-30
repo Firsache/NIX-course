@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homework JS BOM DOM</title>
+</head>
+
+<body>
+    <div>Користувачі:</div>
+    <ul>
+        <li>Джон</li>
+        <li>Піт</li>
+    </ul>
+
+    <script>
+        const users = document.body.children[0];
+        console.log(users);
+        const list = document.body.children[1];
+        console.log(list);
+        const name = document.body.lastElementChild.lastElementChild;
+        console.log(name);
+        /*
+        task ONE
+        variant 1
+        const users = document.querySelector('div');
+        console.log(users);
+        const list = document.querySelector('ul');
+        console.log(list);
+        const name = document.querySelector('ul>li:last-child');
+        console.log(name);
+
+        variant 2
+        const users = document.body.children[0];
+        console.log(users);
+        const list = document.body.children[1];
+        console.log(list);
+        const name = document.body.lastElementChild.lastElementChild;
+        console.log(name);
+
+
+
+        task TWO
+        Якщо elem – довільний вузол DOM-елемента.
+        • Правда, що elem.lastChild.nextSibling завжди дорівнює null ?
+        Так, бо останній елемент (наприклад у body - script) - є останнім, після нього нічого немає, навіть текстового вузла.
+        • Правда, що elem.children[0].previousSibling завжди дорівнює null?
+        Ні, бо перед елементом потомка може бути текстовий вузол.
+
+        */
+    </script>
+</body>
+
+</html>
