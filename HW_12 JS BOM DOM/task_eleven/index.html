@@ -14,7 +14,19 @@
         <li id="two">4</li>
     </ul>
     <script>
-        // Напишіть код для вставки <li>2</li><li>3</li> між двома <li>
+        let one = document.getElementById('one');
+        let two = document.getElementById('two');
+        
+        let secondItem = document.createElement('li');
+        secondItem.innerHTML = '2';
+        one.append(secondItem);
+
+        let thirdItem = document.createElement('li');
+        thirdItem.innerHTML = '3';
+        two.before(thirdItem);
+
+        // variant 2
+        //one.insertAdjacentHTML('afterend', '<li>2</li><li>3</li>');
     </script>
 </body>
 
