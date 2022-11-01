@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homework JS DOM actions</title>
+    <style>
+        .notification {
+            position: fixed;
+            z-index: 1;
+            padding: 10px;
+            border: 1px solid teal;
+            font-size: 24px;
+            background: white;
+            text-align: center;
+            }
+
+            .welcome {
+            background: tomato;
+            color: teal;
+            }
+    </style>
+</head>
+
+<body>   
+    <h1>Сповіщення знаходиться справа</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque quis quam, ipsa asperiores tempore ullam eos. Exercitationem consequatur, nihil, rem dolores harum distinctio voluptatem, deserunt tenetur assumenda dolor ad consectetur?</p>
+
+    <script>
+        function showNotification({ top = 0, right = 0, html, className}) {
+
+            let notification = document.createElement('div');
+            notification.className = "notification";
+            if (className) {
+                notification.classList.add(className);
+            }
+
+            notification.style.top = top + 'px';
+            notification.style.right = right + 'px';
+
+            notification.innerHTML = html;
+            document.body.prepend(notification);
+
+            setTimeout(() => notification.remove(), 1500);
+        }
+        
+        
+        showNotification({
+            top: 10,
+            right: 10,
+            html: 'Hello ',
+            className: "welcome"
+        });
+        
+        /*
+
+        */
+    </script>
+</body>
+
+</html>
