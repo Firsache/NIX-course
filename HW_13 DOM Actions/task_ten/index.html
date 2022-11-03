@@ -9,9 +9,7 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 
-<body>    
-    Код кнопки (можливо вам потрібно змінити CSS):
-    <button class="remove-button">[x]</button>
+<body>
     <div>
         <div class="pane">
             <h3>Кінь</h3>
@@ -37,6 +35,13 @@
     </div>
 
     <script>
+        let panes = document.querySelectorAll('.pane');
+
+        for(let pane of panes){
+            pane.insertAdjacentHTML("afterbegin", '<button class="remove-button">[x]</button>');
+            pane.firstChild.onclick = () => pane.remove();
+        }
+        
         /*
         */
     </script>
