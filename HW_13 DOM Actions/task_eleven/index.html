@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homework JS DOM actions</title>
+    <style>
+        #genres{
+            font-size: 24px;
+            margin-left: 50px;
+        }
+    </style>   
+</head>
+
+<body>
+    <select id="genres">
+        <option value="rock">Рок</option>
+        <option value="blues" selected>Блюз</option>
+    </select>
+
+    <script>
+        let genres = document.getElementById('genres');
+        genres.insertAdjacentHTML('afterbegin', '<option value="classic">Класика</option>');
+        genres.options[0].selected = true;
+        /*
+        
+        */
+    </script>
+</body>
+
+</html>
