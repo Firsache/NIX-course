@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+.quiz-questions,
+.quiz-results,
+.quiz-indicator {
+  margin-bottom: 20px;
+}
+
+.quiz-questions-item__question,
+.quiz-results-item__question {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.quiz-questions-item__answers,
+.quiz-results-item__answers {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn-restart {
+  display: none;
+}
