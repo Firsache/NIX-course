@@ -408,8 +408,21 @@ const renderQuestions = (index) => {
 };
 const renderResults = () => {
     let content = '';
+
+    const getClassname = (answer, questionIndex) => {
+        let classname = '';
+        if (!answer.correct && answer.id === localResults[questionIndex]) {
+            classname = 'answer--invalid';
+        } else if (answer.correct) {
+            classname = 'answer--valid';
+        }
+
+
+        return classname;
+    };
+
     const getAnswers = (questionIndex) => DATA[questionIndex].answers
-        .map((answer) => `<li>${answer.value}</li>`)
+        .map((answer) => `<li class=${getClassname(answer,questionIndex)}>${answer.value}</li>`)
         .join('');
 
     DATA.forEach((question, index) => {
