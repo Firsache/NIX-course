@@ -1,6 +1,6 @@
 const DATA = [
     {
-        questions: 'The closest planet to the Earth is',
+        question: 'The closest planet to the Earth is',
         answers: [
             {
                 id: '1',
@@ -25,7 +25,7 @@ const DATA = [
         ]
     },
     {
-        questions: 'It is physically impossible for which animal to look up into the sky?',
+        question: 'It is physically impossible for which animal to look up into the sky?',
         answers: [
             {
                 id: '5',
@@ -50,7 +50,7 @@ const DATA = [
         ]
     },
     {
-        questions: 'Which animal has not only striped fur, but also striped skin?',
+        question: 'Which animal has not only striped fur, but also striped skin?',
         answers: [
             {
                 id: '9',
@@ -75,7 +75,7 @@ const DATA = [
         ]
     },
     {
-        questions: 'What is Sodium Chloride?',
+        question: 'What is Sodium Chloride?',
         answers: [
             {
                 id: '13',
@@ -100,7 +100,7 @@ const DATA = [
         ]
     },
     {
-        questions: 'Because of what protein blood looks red?',
+        question: 'Because of what protein blood looks red?',
         answers: [
             {
                 id: '17',
@@ -125,7 +125,7 @@ const DATA = [
         ]
     },
     {
-        questions: 'What is the capital of Ireland?',
+        question: 'What is the capital of Ireland?',
         answers: [
             {
                 id: '21',
@@ -150,7 +150,7 @@ const DATA = [
         ]
     },
     {
-        questions: 'What is the most expensive spice in the world?',
+        question: 'What is the most expensive spice in the world?',
         answers: [
             {
                 id: '25',
@@ -175,7 +175,7 @@ const DATA = [
         ]
     },
     {
-        questions: 'Who designed and built the Eiffel Tower?',
+        question: 'Who designed and built the Eiffel Tower?',
         answers: [
             {
                 id: '29',
@@ -200,7 +200,7 @@ const DATA = [
         ]
     },
     {
-        questions: 'In the Simpsons, which colour is Marge’s hair?',
+        question: 'In the Simpsons, which colour is Marge’s hair?',
         answers: [
             {
                 id: '33',
@@ -225,7 +225,7 @@ const DATA = [
         ]
     },
     {
-        questions: 'In which country is the island of Tasmania?',
+        question: 'In which country is the island of Tasmania?',
         answers: [
             {
                 id: '37',
@@ -250,7 +250,7 @@ const DATA = [
         ]
     },
     {
-        questions: 'In which country was Pablo Picasso born?',
+        question: 'In which country was Pablo Picasso born?',
         answers: [
             {
                 id: '41',
@@ -275,7 +275,7 @@ const DATA = [
         ]
     },
     {
-        questions: 'What is the name of Harry Potter’s owl?',
+        question: 'What is the name of Harry Potter’s owl?',
         answers: [
             {
                 id: '45',
@@ -300,7 +300,7 @@ const DATA = [
         ]
     },
     {
-        questions: 'What’s Garfield’s favourite food?',
+        question: 'What’s Garfield’s favourite food?',
         answers: [
             {
                 id: '49',
@@ -325,7 +325,7 @@ const DATA = [
         ]
     },
     {
-        questions: 'In which museum can you find the Mona Lisa?',
+        question: 'In which museum can you find the Mona Lisa?',
         answers: [
             {
                 id: '53',
@@ -350,7 +350,7 @@ const DATA = [
         ]
     },
     {
-        questions: 'What is the rarest blood type?',
+        question: 'What is the rarest blood type?',
         answers: [
             {
                 id: '57',
@@ -401,7 +401,7 @@ const renderQuestions = (index) => {
     
     questions.innerHTML = `
         <div class="quiz-questions-item">
-            <div class="quiz-questions-item__question">${DATA[index].questions}</div>
+            <div class="quiz-questions-item__question">${DATA[index].question}</div>
             <ul class="quiz-questions-item__answers">${renderAnswers()}</ul>
         </div>
     `;
@@ -414,7 +414,7 @@ const renderResults = () => {
 
     DATA.forEach((question, index) => {
         content += `
-        <div class="quiz-results" id="results">
+        <div class="quiz-results-item">
             <div class="quiz-results-item__question">${question.question}</div>
             <ul class="quiz-results-item__answers">${getAnswers(index)}</ul>
         </div>
@@ -439,7 +439,7 @@ quiz.addEventListener('click', (event) => {
         if (DATA.length === nextQuestionIndex) {
             questions.classList.add('questions--hidden');
             indicator.classList.add('indicator--hidden');
-            results.classList.add('results--visible');
+            results.classList.add('indicator--visible');
             btnNext.classList.add('bet-next--hidden');
             btnFinish.classList.add('btn-finish--visible');
             btnRestart.classList.add('btn-restart--visible');
@@ -454,7 +454,17 @@ quiz.addEventListener('click', (event) => {
         console.log('Finish');
     }
     if (event.target.classList.contains('btn-restart')) {
-        console.log('Restart');
-    }
+        localResults = {};
+        results.innerHTML = '';
+
+        questions.classList.remove('questions--hidden');
+        indicator.classList.remove('indicator--hidden');
+        results.classList.remove('indicator--visible');
+        btnNext.classList.remove('bet-next--hidden');
+        btnFinish.classList.remove('btn-finish--visible');
+        btnRestart.classList.remove('btn-restart--visible');
+
+        renderQuestions(0);
+}
 });
 renderQuestions(0);
