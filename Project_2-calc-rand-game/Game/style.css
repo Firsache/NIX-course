@@ -32,3 +32,15 @@ body {
 .btn-restart {
   display: none;
 }
+
+.questions--hidden,
+.indicator--hidden,
+.bet-next--hidden {
+  display: none;
+}
+
+.results--visible,
+.btn-finish--visible,
+.btn-restart--visible {
+  display: block;
+}

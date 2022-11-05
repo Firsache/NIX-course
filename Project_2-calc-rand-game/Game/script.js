@@ -406,7 +406,22 @@ const renderQuestions = (index) => {
         </div>
     `;
 };
-const renderResults = () => { };
+const renderResults = () => {
+    let content = '';
+    const getAnswers = (questionIndex) => DATA[questionIndex].answers
+        .map((answer) => `<li>${answer.value}</li>`)
+        .join('');
+
+    DATA.forEach((question, index) => {
+        content += `
+        <div class="quiz-results" id="results">
+            <div class="quiz-results-item__question">${question.question}</div>
+            <ul class="quiz-results-item__answers">${getAnswers(index)}</ul>
+        </div>
+        `;
+    });
+    results.innerHTML = content;
+};
 const renderIndicator = (currentStep) => {
     indicator.innerHTML = `${currentStep}/${DATA.length}`;
 };
@@ -419,7 +434,20 @@ quiz.addEventListener('change', (event) => {
 });
 quiz.addEventListener('click', (event) => {
     if (event.target.classList.contains('btn-next')) {
-        renderQuestions(Number(questions.dataset.currentStep) + 1);
+        const nextQuestionIndex = Number(questions.dataset.currentStep) + 1;
+        
+        if (DATA.length === nextQuestionIndex) {
+            questions.classList.add('questions--hidden');
+            indicator.classList.add('indicator--hidden');
+            results.classList.add('results--visible');
+            btnNext.classList.add('bet-next--hidden');
+            btnFinish.classList.add('btn-finish--visible');
+            btnRestart.classList.add('btn-restart--visible');
+            
+            renderResults();
+        } else {
+            renderQuestions(nextQuestionIndex);
+        }
         btnNext.disabled = true;
     }
     if (event.target.classList.contains('btn-finish')) {
