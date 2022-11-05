@@ -382,7 +382,6 @@ const questions = document.getElementById('questions');
 const indicator = document.getElementById('indicator');
 const results = document.getElementById('results');
 const btnNext = document.getElementById('btn-next');
-const btnFinish = document.getElementById('btn-finish');
 const btnRestart = document.getElementById('btn-restart');
 
 const renderQuestions = (index) => {
@@ -454,7 +453,6 @@ quiz.addEventListener('click', (event) => {
             indicator.classList.add('indicator--hidden');
             results.classList.add('indicator--visible');
             btnNext.classList.add('bet-next--hidden');
-            btnFinish.classList.add('btn-finish--visible');
             btnRestart.classList.add('btn-restart--visible');
             
             renderResults();
@@ -463,9 +461,7 @@ quiz.addEventListener('click', (event) => {
         }
         btnNext.disabled = true;
     }
-    if (event.target.classList.contains('btn-finish')) {
-        console.log('Finish');
-    }
+    
     if (event.target.classList.contains('btn-restart')) {
         localResults = {};
         results.innerHTML = '';
@@ -474,7 +470,6 @@ quiz.addEventListener('click', (event) => {
         indicator.classList.remove('indicator--hidden');
         results.classList.remove('indicator--visible');
         btnNext.classList.remove('bet-next--hidden');
-        btnFinish.classList.remove('btn-finish--visible');
         btnRestart.classList.remove('btn-restart--visible');
 
         renderQuestions(0);

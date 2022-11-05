@@ -17,7 +17,7 @@ body {
 }
 .pyramid {
     width: 25%;
-    padding-top: 40px;
+    padding-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,10 +25,30 @@ body {
 }
 .money-list {
     list-style: none;
+    width: 100%;
 }
+.money-list-item{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+}
+.money-list-item.active{
+    background-color: teal;
+}
+.money-list-item-number{
+    font-size: 22px;
+    font-weight: 100;
+    width: 30%;
+}
+.money-list-item-amount{
+
+}
+/*
 .money-list-item:not(:last-child) {
     margin-bottom: 10px;
 }
+*/
 
 .quiz {
     margin-top: 50px;
@@ -50,8 +70,7 @@ body {
     margin-bottom: 20px;
 }
 .quiz-questions-item,
-.quiz-results-item {
-    margin-bottom: 20px;
+.quiz-results-item {    
     &__question{
         font-size: 20px;
         margin-bottom: 20px;
@@ -68,8 +87,6 @@ body {
     display: none;
 }
 .btn-next {}
-
-.btn-finish {}
 
 .btn-restart {
     display: none;
