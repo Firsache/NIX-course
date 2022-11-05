@@ -1,10 +1,40 @@
 body {
     margin: 0;
+    background-color: #020230;
+    color: #fff;
+    font-size: 24px;
 }
-
+.main-container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
 .container {
     margin: 0 auto;
     width: 1200px;
+    display: flex;
+}
+.money-rate {
+    margin-left: 400px;
+    &__list {
+        list-style: none;
+    }
+    &__item:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+.quiz {
+    margin-top: 50px;
+}
+.button {
+    background-color: #020230;
+    color: #fff;
+    border: 2px solid #fff;
+
+
+    padding: 10px 25px;
+    border-radius: 4px;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 .quiz-questions,
 .quiz-results,
@@ -48,8 +78,15 @@ body {
 }
 
 .answer--invalid {
-    color: red;
+    color: rgb(179, 3, 3);
 }
 .answer--valid {
-    color: green;
+    color: rgb(6, 135, 6);
+}
+.footer-link {
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
 }

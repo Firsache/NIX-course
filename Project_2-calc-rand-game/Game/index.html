@@ -5,29 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>This is a page for a future game</h1>
-        <div class="quiz" id="quiz">
-            <div class="quiz-questions" id="questions"></div>
-
-            <div class="quiz-indicator" id="indicator">1/15</div>
-            <div class="quiz-results" id="results"></div>
-            <div class="quiz-controls">
-                <button class="btn-next" id="btn-next" disabled>Next question</button>
-                <button class="btn-finish" id="btn-finish">End the game</button>
-                <button class="btn-restart" id="btn-restart">Restart the game</button>
+    <div class="main-container">
+        <div class="container">
+            <div class="game-content">
+                <div id="options">
+                    <div id="fifty" class="options-button" data-bind="click: fifty"></div>
+                    <div id="phone-friend" class="options-button" data-bind="click: fadeOutOption"></div>
+                    <div id="audience" class="options-button" data-bind="click: fadeOutOption"></div>
+                </div>
+                <img src="./img/logo.png" alt="logo how to become a millionaire" id="logo" width="200" />
+                <div class="quiz" id="quiz">
+                    <div class="quiz-questions" id="questions"></div>
+            
+                    <div class="quiz-indicator" id="indicator">1/15</div>
+                    <div class="quiz-results" id="results"></div>
+                    <div class="quiz-controls">
+                        <button class="btn-next button" id="btn-next" disabled>Next question</button>
+                        <button class="btn-finish button" id="btn-finish">End the game</button>
+                        <button class="btn-restart button" id="btn-restart">Restart the game</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="money-rate">
+                <ul class="money-rate__list" id="levels">
+                    <li class="money-rate__item" data-bind="css: {active: level() == 15}" data-amt="1000000" data-lvl="15">$1,000,000</li>
+                    <li class="money-rate__item" data-bind="css: {active: level() == 14}" data-amt="500000" data-lvl="14">$500,000</li>
+                    <li class="money-rate__item" data-bind="css: {active: level() == 13}" data-amt="250000" data-lvl="13">$250,000</li>
+                    <li class="money-rate__item" data-bind="css: {active: level() == 12}" data-amt="125000" data-lvl="12">$125,000</li>
+                    <li class="money-rate__item" data-bind="css: {active: level() == 11}" data-amt="64000" data-lvl="11">$64,000</li>
+                    <li class="money-rate__item" data-bind="css: {active: level() == 10}" data-amt="32000" data-lvl="10">$32,000</li>
+                    <li class="money-rate__item" data-bind="css: {active: level() == 9}" data-amt="16000" data-lvl="9">$16,000</li>
+                    <li class="money-rate__item" data-bind="css: {active: level() == 8}" data-amt="8000" data-lvl="8">$8,000</li>
+                    <li class="money-rate__item" data-bind="css: {active: level() == 7}" data-amt="4000" data-lvl="7">$4,000</li>
+                    <li class="money-rate__item" data-bind="css: {active: level() == 6}" data-amt="2000" data-lvl="6">$2,000</li>
+                    <li class="money-rate__item" data-bind="css: {active: level() == 5}" data-amt="1000" data-lvl="5">$1,000</li>
+                    <li class="money-rate__item" data-bind="css: {active: level() == 4}" data-amt="500" data-lvl="4">$500</li>
+                    <li class="money-rate__item" data-bind="css: {active: level() == 3}" data-amt="300" data-lvl="3">$300</li>
+                    <li class="money-rate__item" data-bind="css: {active: level() == 2}" data-amt="200" data-lvl="2">$200</li>
+                    <li class="money-rate__item" data-bind="css: {active: level() == 1}" data-amt="100" data-lvl="1">$100</li>
+                </ul>
             </div>
         </div>
         
+        <footer>
+            <a class="footer-link button" href="/Project_2-calc-rand-game/index.html">Go back to the main page</a>
+        </footer>
         
         
     </div>
-    <footer>
-            <a href="/Project_2-calc-rand-game/index.html">Go back to the main page</a>
-        </footer>
     <script src="./script.js"></script>
 </body>
 </html>
