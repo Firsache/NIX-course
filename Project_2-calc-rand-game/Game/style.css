@@ -5,26 +5,42 @@ body {
   font-size: 24px;
 }
 
-.main-container {
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-
 .container {
-  margin: 0 auto;
-  width: 1200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.money-rate {
-  margin-left: 400px;
+.game-content {
+  width: 75%;
+  padding: 40px 100px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(#020230)), url("./img/bg.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #020230), url("./img/bg.jpg");
 }
-.money-rate__list {
+
+.pyramid {
+  width: 25%;
+  padding-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.money-list {
   list-style: none;
 }
-.money-rate__item:not(:last-child) {
+
+.money-list-item:not(:last-child) {
   margin-bottom: 10px;
 }
 
