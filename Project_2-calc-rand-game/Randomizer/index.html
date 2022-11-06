@@ -5,14 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Randomizer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1>This is a page for a future randomizer</h1>
+    <div class="main-container">
+        <header class="header">
+            <h1>Random number generator</h1>
+        </header>
+        <main class="container">
+            <div class="number-one">
+                <label for="min">Min:</label>
+                <input type="number" name="min" id="min">
+            </div>
+        
+            <div class="number-two">
+                <label for="max">Min:</label>
+                <input type="number" name="max" id="max">
+            </div>
+            <button class="btn">Generate</button>
+            <div class="result">Result:</div>
+            <div class="result-box">                
+                <div id="output" class="output"></div>
+                <div class="input-numbers">Min: <span class="num-one"></span>, Max: <span class="num-two"></span></div>
+                <div class="time"></div>
+            </div>
+        </main>
+        
+        <footer class="footer">
+            <a href="/Project_2-calc-rand-game/index.html" class="btn">Go back to the main page</a>
+        </footer>
+    </div>
 
-    <footer>
-        <a href="/Project_2-calc-rand-game/index.html">Go back to the main page</a>
-    </footer>
     <script src="./script.js"></script>
 </body>
 </html>

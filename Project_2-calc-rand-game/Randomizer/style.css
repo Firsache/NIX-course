@@ -1,0 +1,74 @@
+.main-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+}
+.header{
+    padding: 20px 20px;
+    background-color: rgb(155, 99, 169);
+}
+.header h1{
+    margin: 0;
+    text-align: center;
+
+    font-weight: 500;
+    color: #fff;
+}
+.container{
+    padding: 20px 30px;
+    margin-bottom: 30px;
+    border: 2px solid rgb(155, 99, 169);
+}
+.number-one,
+.number-two {
+    margin-bottom: 20px;
+}
+.number-one label,
+.number-two label{
+    padding-right: 10px;
+    color: rgb(152, 149, 149);
+}
+input:hover,
+input:focus{
+    border-color: rgb(155, 99, 169);
+}
+.btn {
+    padding: 11px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+
+    background-color: rgb(155, 99, 169);
+    color: #fff;
+    border: none;
+}
+.btn:hover,
+.btn:focus {
+    filter: brightness(90%);
+}
+.result {
+    color: rgb(152, 149, 149);
+    margin-bottom: 10px;
+}
+.result-box {
+    display: none;
+
+    background-color: rgb(155, 99, 169);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+.output{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.input-numbers {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+.time {
+        font-size: 12px;
+    }
+.footer .btn{
+    text-decoration: none;
+}
