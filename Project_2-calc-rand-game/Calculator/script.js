@@ -53,7 +53,7 @@ document.querySelector('.buttons').onclick = (event) => {
         if (b === '') b = a;
         switch (sign) {
             case '+':
-                a = ((+a) + (+b)).toFixed(5);
+                a = ((+a) + (+b)).toFixed(2);
                 break;
             case '-':
                 a = (a - b).toFixed(2);
